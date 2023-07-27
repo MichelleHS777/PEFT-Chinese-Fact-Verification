@@ -1,4 +1,10 @@
 # PEFT-Chinese-Fact-Verification
+## Claim Verification
+* P-Tuning
+* P-Tuning v2
+* LoRA (rank=4 is the best)
+## Template Engineering
+* We only define 10 soft tokens for peft
 ## Basic Usage  
     python main.py  
 ## Arguments  
