@@ -1,5 +1,6 @@
 from tqdm import tqdm
 import json
+import argparse
 
 # ------------------------init parameters----------------------------
 parser = argparse.ArgumentParser(description='Preprocess Datasets')
