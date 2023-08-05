@@ -5,6 +5,10 @@
 * LoRA (rank=4 is the best)
 ## Template Engineering
 * We only define 10 soft tokens for peft
+## Preprocess
+    python preprocess.py 
+`--dataset` choose the dataset path you want to preprocess (default='datasets/unpreprocess/train.json')   
+`--save_file` save the preprocess file (default='datasets/preprocessed/train.json')  
 ## Basic Usage  
     python main.py  
 ## Arguments  
