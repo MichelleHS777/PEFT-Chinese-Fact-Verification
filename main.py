@@ -189,17 +189,17 @@ if args.eval:
         with torch.no_grad():
             outputs = model(**batch)
         predictions = outputs.logits.softmax(dim=-1)
-        # predictions = torch.argmax(predictions, dim=-1)
-        predictions = torch.argmax(predictions)
-        class_labels = ['SUP', 'REF', 'NEI']
-        predicted_label = class_labels[predictions]
-        print("預測的 label 為:", predicted_label)
-    #     labels = batch['labels']
-    #     test_y_true.extend(labels.cpu().tolist())
-    #     test_y_pred.extend(predictions.cpu().tolist())
-    # pre, recall, f1, _ = precision_recall_fscore_support(test_y_true, test_y_pred, average='micro')
-    # print("       F1 (micro): {:.2%}".format(f1))
-    # pre, recall, f1, _ = precision_recall_fscore_support(test_y_true, test_y_pred, average='macro')
-    # print("Precision (macro): {:.2%}".format(pre))
-    # print("   Recall (macro): {:.2%}".format(recall))
-    # print("       F1 (macro): {:.2%}".format(f1))
+        predictions = torch.argmax(predictions, dim=-1)
+        # predictions = torch.argmax(predictions)
+        # class_labels = ['SUP', 'REF', 'NEI']
+        # predicted_label = class_labels[predictions]
+        # print("預測的 label 為:", predicted_label)
+        labels = batch['labels']
+        test_y_true.extend(labels.cpu().tolist())
+        test_y_pred.extend(predictions.cpu().tolist())
+    pre, recall, f1, _ = precision_recall_fscore_support(test_y_true, test_y_pred, average='micro')
+    print("       F1 (micro): {:.2%}".format(f1))
+    pre, recall, f1, _ = precision_recall_fscore_support(test_y_true, test_y_pred, average='macro')
+    print("Precision (macro): {:.2%}".format(pre))
+    print("   Recall (macro): {:.2%}".format(recall))
+    print("       F1 (macro): {:.2%}".format(f1))
