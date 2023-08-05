@@ -1,8 +1,6 @@
 import argparse
 import os
-import argparse
 import time
-
 import pandas as pd
 import torch
 from sklearn.metrics import precision_recall_fscore_support
