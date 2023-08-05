@@ -16,6 +16,6 @@
 `--type` ptuningv1, ptuningv2, lora  
 `--train` Remember to set this if you want to train.    
 `--eval` Remember to set this if you want to evaluate.   
-`--train_file` (Eg: 'datasets/preprocessed/train.json')  
-`--valid_file` (Eg: 'datasets/preprocessed/dev.json')  
-`--test_file` (Eg: 'datasets/preprocessed/test.json')
+`--train_file` (default: 'datasets/preprocessed/train.json')  
+`--valid_file` (default: 'datasets/preprocessed/dev.json')  
+`--test_file` (default: 'datasets/preprocessed/test.json')
