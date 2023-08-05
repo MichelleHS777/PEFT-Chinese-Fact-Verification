@@ -19,3 +19,5 @@
 `--train_file` (default: 'datasets/preprocessed/train.json')  
 `--valid_file` (default: 'datasets/preprocessed/dev.json')  
 `--test_file` (default: 'datasets/preprocessed/test.json')
+## Checkpoint
+* [Checkpoint](https://drive.google.com/file/d/15aBYds5C_APrGcfnX0NcUGf_o3_p0Ntn/view?usp=sharing)
