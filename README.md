@@ -10,7 +10,7 @@
 `--dataset` choose the dataset path you want to preprocess (default='datasets/unpreprocess/train.json')   
 `--save_file` save the preprocess file (default='datasets/preprocessed/train.json')  
 ## Basic Usage  
-    python main.py  
+    python main.py --train --eval
 ## Arguments  
 `--plm` bert, bert-large, roberta, ernie, roberta-large  
 `--type` ptuningv1, ptuningv2, lora  
