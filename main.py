@@ -60,8 +60,12 @@ if args.type=='ptuningv2':
     peft_config = PrefixTuningConfig(task_type="SEQ_CLS", num_virtual_tokens=args.soft_tokens)
 elif args.type=='lora':
     peft_type = PeftType.LORA
+    # target: Q, K, V, Dense
     peft_config = LoraConfig(task_type="SEQ_CLS", inference_mode=False, r=args.rank, 
                              lora_alpha=16, lora_dropout=0.1, target_modules=['query', 'key', 'value', 'output.dense'])
+    # target: Q, K, V
+    # peft_config = LoraConfig(task_type="SEQ_CLS", inference_mode=False, r=args.rank, 
+    #                          lora_alpha=16, lora_dropout=0.1, target_modules=['query', 'key', 'value'])
 elif args.type=='ptuningv1':
     peft_type = PeftType.P_TUNING
     peft_config = PromptEncoderConfig(task_type="SEQ_CLS", num_virtual_tokens=args.soft_tokens)
