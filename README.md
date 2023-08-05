@@ -12,7 +12,7 @@
 ## Basic Usage  
     python main.py    
 ## Arguments  
-`--plm` bert, bert-large, roberta, ernie, roberta-large  
+`--plm` bert, bert-large, roberta, ernie, roberta-large (Use large model is the best)  
 `--type` ptuningv1, ptuningv2, lora  
 `--train` Remember to set this if you want to train.    
 `--eval` Remember to set this if you want to evaluate.   
